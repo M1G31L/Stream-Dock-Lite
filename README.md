@@ -13,7 +13,7 @@ Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
 ## Contenido
 
 - [Qué hace](#qué-hace)
-- [Instalación](#instalación)
+- [Instalación](#instalación) · [guía completa](docs/INSTALACION.md)
 - [Spotify](#spotify)
 - [Estilos de la tecla «Ahora suena»](#estilos-de-la-tecla-ahora-suena)
 - [Reacción de teclas y botones](#reacción-de-teclas-y-botones)
@@ -43,19 +43,31 @@ Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
 
 ## Instalación
 
-1. Descarga **`StreamDockLite-Setup.exe`** desde [Releases](../../releases/latest) y ábrelo.
-   - No necesitas Python ni permisos de administrador.
-   - Se instala en `%LOCALAPPDATA%\Programs\StreamDockLite` y crea accesos en el Escritorio y el menú Inicio.
-   - Necesita internet solo durante la instalación, para descargar los componentes de USB y Spotify.
-   - Si Windows muestra «Windows protegió tu PC», pulsa *Más información* → *Ejecutar de todas formas*
-     (sale porque el instalador no está firmado digitalmente).
-2. **Cierra por completo el software oficial Stream Dock**, también el icono junto al reloj.
-   Solo un programa a la vez puede controlar el dispositivo.
-3. Abre **Stream Dock Lite**.
+> 📘 **Guía completa paso a paso, con imágenes y solución de problemas: [docs/INSTALACION.md](docs/INSTALACION.md)**
 
-Al cerrar la ventana, la app sigue funcionando junto al reloj: doble clic para abrirla,
-clic derecho para play/pausa, cambiar de canción o salir.
-Para desinstalar: *Configuración → Aplicaciones instaladas → Stream Dock Lite*.
+**Requisitos:** Windows 10 u 11 (64 bits), el Stream Dock N3E conectado por USB e internet solo
+durante la instalación. No hace falta Python ni permisos de administrador.
+
+1. **Descarga** `StreamDockLite-Setup.exe` desde [Releases](../../releases/latest) (sección *Assets*).
+2. **Ábrelo con doble clic.** Si Windows muestra «Windows protegió tu PC», pulsa
+   **Más información → Ejecutar de todas formas** (sale porque el instalador no tiene firma de pago).
+3. **Espera a que la ventana del instalador diga «Listo».** Tarda de 1 a 3 minutos.
+4. **Cierra el software oficial Stream Dock del todo:** clic derecho en su icono junto al reloj → **Salir**.
+   Solo un programa a la vez puede controlar el dispositivo.
+5. **Abre Stream Dock Lite** desde el Escritorio o el menú Inicio. Arriba debe decir
+   **● N3E conectado**.
+6. **Si las imágenes no llenan las teclas:** **⚙ Ajustes → Pantallas de las teclas → Ver patrón**
+   ([cómo calibrar](#calibrar-las-pantallas)).
+
+<p align="center"><img src="docs/img/instalador.png" alt="Ventana del instalador" width="560"></p>
+
+- Se instala en `%LOCALAPPDATA%\Programs\StreamDockLite`, con accesos en el Escritorio y el menú Inicio
+  (también **Diagnóstico del N3E**).
+- Al cerrar la ventana, la app sigue funcionando junto al reloj: doble clic para abrirla,
+  clic derecho para play/pausa, cambiar de canción o salir.
+- **Actualizar:** *⚙ Ajustes → Actualizar desde archivo…* con el `.zip` de la nueva versión, o abre
+  el nuevo `.exe`. Tu configuración se conserva.
+- **Desinstalar:** *Configuración de Windows → Aplicaciones instaladas → Stream Dock Lite*.
 
 ## Spotify
 
