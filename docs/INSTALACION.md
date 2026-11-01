@@ -33,11 +33,23 @@ Guía paso a paso para Windows 10 y Windows 11. Tiempo aproximado: **5 minutos**
 
 ## 2. Descargar el instalador
 
-1. Entra en la página de **[Releases](../../../releases/latest)** del repositorio.
-2. En la sección **Assets** de la última versión, descarga **`StreamDockLite-Setup.exe`** (unos 50 MB).
+### ⭐ Opción recomendada: `StreamDockLite-Setup.exe`
 
-> El archivo `StreamDockLite-<versión>-actualizacion.zip` sirve para actualizar una instalación que ya
-> tienes (ver el [paso 8](#8-actualizar-a-una-versión-nueva)). Para instalar por primera vez, usa el `.exe`.
+**[⬇️ Descargar StreamDockLite-Setup.exe](../../../raw/main/descargas/StreamDockLite-Setup.exe)** (unos 50 MB)
+
+Es la forma más fácil y la que recomendamos: **un solo archivo que lo instala todo**. Trae su propio
+Python, no pide permisos de administrador, crea los accesos directos, aparece en *Aplicaciones
+instaladas* para desinstalarla, y también sirve para **actualizar** (conserva tu configuración).
+
+También lo encuentras en la carpeta [`descargas/`](../descargas) del repositorio y, cuando se publique,
+en **[Releases](../../../releases/latest)**.
+
+### Otras opciones
+
+| Opción | Cuándo usarla |
+|---|---|
+| `StreamDockLite-<versión>-actualizacion.zip` (en Releases) | Actualizar desde la propia app: *⚙ Ajustes → Actualizar desde archivo…* ([paso 8](#8-actualizar-a-una-versión-nueva)) |
+| Desde el código | Si quieres usar tu propio Python o modificar la app ([paso 11](#11-instalar-desde-el-código-avanzado)) |
 
 ---
 
@@ -134,12 +146,14 @@ progreso y el volumen de Spotify en la perilla 1.
 
 ## 8. Actualizar a una versión nueva
 
-**Opción A: desde la app (recomendada).**
+**Opción A (recomendada): el nuevo instalador.** Descarga el último
+[`StreamDockLite-Setup.exe`](../../../raw/main/descargas/StreamDockLite-Setup.exe) y ábrelo. Reemplaza la versión anterior; no hace falta
+desinstalar nada.
+
+**Opción B: desde la app.**
 1. Descarga `StreamDockLite-<versión>-actualizacion.zip` desde [Releases](../../../releases).
 2. En la app: **⚙ Ajustes → Actualizaciones → Actualizar desde archivo…** y elige el `.zip`.
 3. Revisa la versión y las novedades, y pulsa **Sí**. La app se reinicia sola.
-
-**Opción B:** descarga el nuevo `StreamDockLite-Setup.exe` y ábrelo. Reemplaza la versión anterior.
 
 En los dos casos **se conserva** tu configuración: páginas, teclas, iconos, sonidos y apariencia.
 Antes de actualizar se guarda una copia; si algo no te gusta: **⚙ Ajustes → Volver a la versión anterior**.

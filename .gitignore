@@ -4,3 +4,4 @@ dist/
 installer/setup/payload/
 installer/setup/launcher.exe
 *.exe
+!descargas/*.exe

@@ -7,6 +7,12 @@ Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
   <img src="docs/img/interfaz_oscura_fondo.jpg" alt="Interfaz de Stream Dock Lite con tema oscuro y fondo desenfocado" width="820">
 </p>
 
+<p align="center">
+  <a href="../../raw/main/descargas/StreamDockLite-Setup.exe"><b>⬇️ Descargar StreamDockLite-Setup.exe</b></a> (recomendado) ·
+  <a href="docs/INSTALACION.md">Guía de instalación</a> ·
+  <a href="CHANGELOG.md">Novedades</a>
+</p>
+
 > Proyecto no oficial. No está afiliado a Mirabox, Elgato ni Spotify.
 > Las imágenes de esta página usan portadas de ejemplo generadas por el propio proyecto.
 
@@ -48,7 +54,9 @@ Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
 **Requisitos:** Windows 10 u 11 (64 bits), el Stream Dock N3E conectado por USB e internet solo
 durante la instalación. No hace falta Python ni permisos de administrador.
 
-1. **Descarga** `StreamDockLite-Setup.exe` desde [Releases](../../releases/latest) (sección *Assets*).
+1. **Descarga [`StreamDockLite-Setup.exe`](../../raw/main/descargas/StreamDockLite-Setup.exe)** ⭐ **opción recomendada**: un solo archivo
+   que instala todo, sin Python ni permisos de administrador. También está en la carpeta
+   [`descargas/`](descargas) y, cuando se publique, en [Releases](../../releases/latest).
 2. **Ábrelo con doble clic.** Si Windows muestra «Windows protegió tu PC», pulsa
    **Más información → Ejecutar de todas formas** (sale porque el instalador no tiene firma de pago).
 3. **Espera a que la ventana del instalador diga «Listo».** Tarda de 1 a 3 minutos.
@@ -65,8 +73,9 @@ durante la instalación. No hace falta Python ni permisos de administrador.
   (también **Diagnóstico del N3E**).
 - Al cerrar la ventana, la app sigue funcionando junto al reloj: doble clic para abrirla,
   clic derecho para play/pausa, cambiar de canción o salir.
-- **Actualizar:** *⚙ Ajustes → Actualizar desde archivo…* con el `.zip` de la nueva versión, o abre
-  el nuevo `.exe`. Tu configuración se conserva.
+- **Actualizar:** lo más sencillo es abrir el nuevo `StreamDockLite-Setup.exe` (recomendado); también
+  puedes usar *⚙ Ajustes → Actualizar desde archivo…* con el `.zip` de la nueva versión. Tu
+  configuración se conserva en los dos casos.
 - **Desinstalar:** *Configuración de Windows → Aplicaciones instaladas → Stream Dock Lite*.
 
 ## Spotify
