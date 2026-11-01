@@ -2,6 +2,9 @@
 
 Guía paso a paso para Windows 10 y Windows 11. Tiempo aproximado: **5 minutos**.
 
+> ⚠️ **Solo para el Stream Dock N3E (`N3E_1B05`).** No funciona con otros modelos.
+> Comprueba el tuyo en el [paso 1](#1-antes-de-empezar) antes de instalar.
+
 ## Contenido
 
 1. [Antes de empezar](#1-antes-de-empezar)
@@ -23,11 +26,22 @@ Guía paso a paso para Windows 10 y Windows 11. Tiempo aproximado: **5 minutos**
 | Necesitas | Detalle |
 |---|---|
 | **Windows 10 u 11** (64 bits) | |
-| **Stream Dock N3E** (`N3E_1B05`) | Conectado por USB con un cable **de datos**, no solo de carga |
+| **Stream Dock N3E** (`N3E_1B05`) | **Es el único dispositivo compatible.** Conectado por USB con un cable **de datos**, no solo de carga |
 | **Internet** | Solo durante la instalación, para descargar los componentes de USB y Spotify (unos 60 MB) |
 | **Spotify de escritorio** | Opcional, para las teclas de música. La versión de la Microsoft Store también sirve |
 
 **No necesitas** instalar Python ni tener permisos de administrador: el instalador lo trae todo.
+
+### ¿Mi dispositivo es compatible?
+
+Stream Dock Lite **solo** funciona con el modelo cuyo identificador es **`N3E_1B05`**. Compruébalo así:
+
+- **En el software oficial Stream Dock:** el dispositivo aparece con el nombre **`N3E_1B05`**.
+- **En Windows:** *Administrador de dispositivos* → *Dispositivos de interfaz humana* → abre cada
+  «Dispositivo compatible con HID» → pestaña **Detalles** → propiedad **Id. de hardware**.
+  Si alguno contiene **`PID_1B05`**, tu dispositivo es compatible.
+
+Si no aparece `1B05`, la app no lo reconocerá: se quedará en **● Buscando N3E…**.
 
 ---
 
@@ -35,7 +49,7 @@ Guía paso a paso para Windows 10 y Windows 11. Tiempo aproximado: **5 minutos**
 
 ### ⭐ Opción recomendada: `StreamDockLite-Setup.exe`
 
-**[⬇️ Descargar StreamDockLite-Setup.exe](../../../raw/main/descargas/StreamDockLite-Setup.exe)** (unos 50 MB)
+**[⬇️ Descargar StreamDockLite-Setup.exe](../../../raw/main/descargas/StreamDockLite-Setup.exe)** (unos 50 MB · solo para el N3E_1B05)
 
 Es la forma más fácil y la que recomendamos: **un solo archivo que lo instala todo**. Trae su propio
 Python, no pide permisos de administrador, crea los accesos directos, aparece en *Aplicaciones
@@ -173,6 +187,7 @@ Antes de actualizar se guarda una copia; si algo no te gusta: **⚙ Ajustes → 
 
 | Problema | Solución |
 |---|---|
+| Arriba dice **● Buscando N3E…** y nunca conecta | Comprueba que tu modelo sea el **`N3E_1B05`** ([paso 1](#mi-dispositivo-es-compatible)): otros modelos no son compatibles |
 | Arriba dice **● N3E desconectado** | Cierra el software oficial del todo ([paso 4](#4-cerrar-el-software-oficial-stream-dock)). Prueba otro cable USB (de datos) u otro puerto. Luego **⚙ Ajustes → Reconectar** |
 | Sigue sin detectarlo | Abre **Diagnóstico del N3E** desde el menú Inicio: dibuja los números 1–6 en las teclas y guarda un `informe_deteccion.txt` con lo que encontró |
 | Las imágenes salen pequeñas, movidas o con fondo alrededor | Calibra las pantallas ([paso 6](#6-ajustar-las-pantallas-de-las-teclas-si-hace-falta)) |

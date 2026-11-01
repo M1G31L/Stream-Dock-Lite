@@ -8,16 +8,20 @@ Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
 </p>
 
 <p align="center">
-  <a href="../../raw/main/descargas/StreamDockLite-Setup.exe"><b>⬇️ Descargar StreamDockLite-Setup.exe</b></a> (recomendado) ·
+  <a href="../../raw/main/descargas/StreamDockLite-Setup.exe"><b>⬇️ Descargar StreamDockLite-Setup.exe</b></a> (recomendado, solo para el N3E_1B05) ·
   <a href="docs/INSTALACION.md">Guía de instalación</a> ·
   <a href="CHANGELOG.md">Novedades</a>
 </p>
+
+> ⚠️ **Solo para el Stream Dock N3E (`N3E_1B05`).** No funciona con otros modelos de Stream Dock,
+> Mirabox, Ajazz ni con el Elgato Stream Deck. [¿Cómo sé si el mío es compatible?](#dispositivo-compatible)
 
 > Proyecto no oficial. No está afiliado a Mirabox, Elgato ni Spotify.
 > Las imágenes de esta página usan portadas de ejemplo generadas por el propio proyecto.
 
 ## Contenido
 
+- [Dispositivo compatible](#dispositivo-compatible)
 - [Qué hace](#qué-hace)
 - [Instalación](#instalación) · [guía completa](docs/INSTALACION.md)
 - [Spotify](#spotify)
@@ -31,11 +35,34 @@ Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
 - [Para desarrolladores](#para-desarrolladores)
 - [Créditos](#créditos)
 
+## Dispositivo compatible
+
+Stream Dock Lite está hecho **exclusivamente** para un modelo:
+
+| | |
+|---|---|
+| **Modelo** | Stream Dock **N3E** |
+| **Identificador** | **`N3E_1B05`** (identificador de producto USB `1B05`) |
+| **Controles** | 6 teclas con pantalla · 3 botones · 3 perillas |
+
+Al conectarse, la app busca solo ese identificador. Con cualquier otro dispositivo verás
+**● Buscando N3E…** y no se conectará.
+
+**Cómo comprobar si el tuyo es compatible** (cualquiera de las dos):
+
+1. **En el software oficial Stream Dock:** el nombre del dispositivo aparece como **`N3E_1B05`**.
+2. **En Windows:** *Administrador de dispositivos* → *Dispositivos de interfaz humana* → abre cada
+   «Dispositivo compatible con HID» → pestaña **Detalles** → **Id. de hardware**. Si alguno contiene
+   **`PID_1B05`**, es compatible.
+
+También puedes instalar la app y abrir **Diagnóstico del N3E** (menú Inicio): te dice si encuentra el
+dispositivo y dibuja los números 1–6 en sus teclas.
+
 ## Qué hace
 
 | | |
 |---|---|
-| **Dispositivo** | Solo el Stream Dock N3E (`N3E_1B05`): 6 teclas con pantalla, 3 botones y 3 perillas. Reconexión automática. |
+| **Dispositivo** | **Solo el Stream Dock N3E (`N3E_1B05`)**: 6 teclas con pantalla, 3 botones y 3 perillas. Reconexión automática. |
 | **Interfaz estilo Elgato** | Biblioteca de acciones para **arrastrar y soltar**, inspector, páginas, copiar/pegar, intercambiar teclas. |
 | **Spotify** | Portada en vivo, play/pausa, pistas, aleatorio, repetir, progreso, volumen **solo de Spotify**, «Me gusta» y teclas de **playlists**. |
 | **Acciones del sistema** | Abrir apps, archivos o webs, atajos de teclado, escribir texto, comandos, multimedia y cambiar de página. |
@@ -51,8 +78,8 @@ Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
 
 > 📘 **Guía completa paso a paso, con imágenes y solución de problemas: [docs/INSTALACION.md](docs/INSTALACION.md)**
 
-**Requisitos:** Windows 10 u 11 (64 bits), el Stream Dock N3E conectado por USB e internet solo
-durante la instalación. No hace falta Python ni permisos de administrador.
+**Requisitos:** Windows 10 u 11 (64 bits), un **Stream Dock N3E (`N3E_1B05`)** —
+[ver compatibilidad](#dispositivo-compatible)— conectado por USB, e internet solo durante la instalación. No hace falta Python ni permisos de administrador.
 
 1. **Descarga [`StreamDockLite-Setup.exe`](../../raw/main/descargas/StreamDockLite-Setup.exe)** ⭐ **opción recomendada**: un solo archivo
    que instala todo, sin Python ni permisos de administrador. También está en la carpeta
