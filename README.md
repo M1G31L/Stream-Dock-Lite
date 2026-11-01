@@ -16,6 +16,10 @@ Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
 > ⚠️ **Solo para el Stream Dock N3E (`N3E_1B05`).** No funciona con otros modelos de Stream Dock,
 > Mirabox, Ajazz ni con el Elgato Stream Deck. [¿Cómo sé si el mío es compatible?](#dispositivo-compatible)
 
+> 🚧 **Proyecto en desarrollo: no está completo.** Funciona, pero hay partes sin probar en todos los
+> equipos y muchas ideas pendientes. **Cualquiera puede hacer sus propios cambios o mejoras**: el código
+> es libre (MIT). Mira [cómo hacer cambios o mejoras](CONTRIBUIR.md).
+
 > Proyecto no oficial. No está afiliado a Mirabox, Elgato ni Spotify.
 > Las imágenes de esta página usan portadas de ejemplo generadas por el propio proyecto.
 
@@ -32,6 +36,7 @@ Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
 - [Calibrar las pantallas](#calibrar-las-pantallas)
 - [Actualizaciones](#actualizaciones)
 - [Historial de versiones](#historial-de-versiones)
+- [Estado del proyecto y cómo mejorarlo](#estado-del-proyecto-y-cómo-mejorarlo)
 - [Para desarrolladores](#para-desarrolladores)
 - [Créditos](#créditos)
 
@@ -224,6 +229,22 @@ Resumen; el detalle de cada versión está en **[CHANGELOG.md](CHANGELOG.md)**.
 | 2.1.0 | Biblioteca de iconos con importación de `.zip`/`.rar` |
 | 2.0.0 | Solo N3E_1B05 · interfaz estilo Elgato · integración con Spotify |
 | 1.0.0 | Primera versión |
+
+## Estado del proyecto y cómo mejorarlo
+
+**Stream Dock Lite no está terminado.** Lo principal funciona, pero:
+
+- Solo se ha usado con el N3E de una marca; otras unidades pueden necesitar calibrar las pantallas.
+- Algunas funciones que dependen de Windows (sonidos, nivel de audio, fondos de video) no se han
+  probado en todos los equipos.
+- Las imágenes de este README son ilustraciones generadas con el código de la app, no capturas reales.
+- Quedan muchas ideas por hacer: carpetas de teclas, doble toque, letras sincronizadas, perfiles
+  automáticos por app, integración con OBS y Discord, otros modelos…
+
+**Puedes hacer tus propios cambios o mejoras**, para ti o para compartirlos: descarga o haz *fork* del
+código, modifícalo y, si quieres, propón tus cambios con un *Pull request*. La guía
+**[CONTRIBUIR.md](CONTRIBUIR.md)** explica cómo empezar, dónde está cada cosa en el código, lo que
+falta por probar y la lista de ideas pendientes. Si encuentras un fallo, abre un *Issue*.
 
 ## Para desarrolladores
 
