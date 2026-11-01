@@ -1,0 +1,2 @@
+Copia aqui tus iconos (.png, .jpg, .ico...). Puedes usar subcarpetas.
+Tambien puedes importarlos desde la app: Inspector > Iconos... > Importar.

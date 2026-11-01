@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+dist/
+installer/setup/payload/
+installer/setup/launcher.exe
+*.exe

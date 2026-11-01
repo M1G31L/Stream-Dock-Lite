@@ -1,0 +1,218 @@
+# Stream Dock Lite
+
+**Controlador alternativo, ligero y sin cuenta para el Stream Dock N3E (`N3E_1B05`)**, con estilo
+Elgato Stream Deck e integración completa con Spotify. Para Windows 10/11.
+
+<p align="center">
+  <img src="docs/img/interfaz_oscura_fondo.jpg" alt="Interfaz de Stream Dock Lite con tema oscuro y fondo desenfocado" width="820">
+</p>
+
+> Proyecto no oficial. No está afiliado a Mirabox, Elgato ni Spotify.
+> Las imágenes de esta página usan portadas de ejemplo generadas por el propio proyecto.
+
+## Contenido
+
+- [Qué hace](#qué-hace)
+- [Instalación](#instalación)
+- [Spotify](#spotify)
+- [Estilos de la tecla «Ahora suena»](#estilos-de-la-tecla-ahora-suena)
+- [Reacción de teclas y botones](#reacción-de-teclas-y-botones)
+- [Apariencia: temas y fondos](#apariencia-temas-y-fondos)
+- [Protector de pantalla](#protector-de-pantalla)
+- [Calibrar las pantallas](#calibrar-las-pantallas)
+- [Actualizaciones](#actualizaciones)
+- [Historial de versiones](#historial-de-versiones)
+- [Para desarrolladores](#para-desarrolladores)
+- [Créditos](#créditos)
+
+## Qué hace
+
+| | |
+|---|---|
+| **Dispositivo** | Solo el Stream Dock N3E (`N3E_1B05`): 6 teclas con pantalla, 3 botones y 3 perillas. Reconexión automática. |
+| **Interfaz estilo Elgato** | Biblioteca de acciones para **arrastrar y soltar**, inspector, páginas, copiar/pegar, intercambiar teclas. |
+| **Spotify** | Portada en vivo, play/pausa, pistas, aleatorio, repetir, progreso, volumen **solo de Spotify**, «Me gusta» y teclas de **playlists**. |
+| **Acciones del sistema** | Abrir apps, archivos o webs, atajos de teclado, escribir texto, comandos, multimedia y cambiar de página. |
+| **Personalización** | Iconos propios (importa `.zip`/`.rar`), colores, títulos, estilos animados, sonidos y efectos de reacción. |
+| **Apariencia** | Tema oscuro, claro o como Windows, color de acento y fondos con imagen, video/GIF o la portada de la canción. |
+| **Comodidad** | Icono junto al reloj, iniciar con Windows, protector de pantalla, instalador `.exe` sin Python, actualizaciones con vuelta atrás. |
+
+<p align="center">
+  <img src="docs/img/dispositivo.png" alt="Vista del N3E en la app con la página de Spotify" width="420">
+</p>
+
+## Instalación
+
+1. Descarga **`StreamDockLite-Setup.exe`** desde [Releases](../../releases/latest) y ábrelo.
+   - No necesitas Python ni permisos de administrador.
+   - Se instala en `%LOCALAPPDATA%\Programs\StreamDockLite` y crea accesos en el Escritorio y el menú Inicio.
+   - Necesita internet solo durante la instalación, para descargar los componentes de USB y Spotify.
+   - Si Windows muestra «Windows protegió tu PC», pulsa *Más información* → *Ejecutar de todas formas*
+     (sale porque el instalador no está firmado digitalmente).
+2. **Cierra por completo el software oficial Stream Dock**, también el icono junto al reloj.
+   Solo un programa a la vez puede controlar el dispositivo.
+3. Abre **Stream Dock Lite**.
+
+Al cerrar la ventana, la app sigue funcionando junto al reloj: doble clic para abrirla,
+clic derecho para play/pausa, cambiar de canción o salir.
+Para desinstalar: *Configuración → Aplicaciones instaladas → Stream Dock Lite*.
+
+## Spotify
+
+Funciona con la **app de escritorio de Spotify**, sin iniciar sesión, a través de los controles
+multimedia de Windows.
+
+<p align="center">
+  <img src="docs/img/teclas_spotify.png" alt="Teclas de Spotify sonando y con Spotify cerrado" width="620">
+</p>
+
+| Acción | Qué hace |
+|---|---|
+| Ahora suena | La portada de la canción, con el estilo que elijas. Pulsar = play/pausa |
+| Play / Pausa | El icono cambia según el estado |
+| Siguiente / Anterior | Cambia de canción |
+| Aleatorio / Repetir | Se ilumina en verde cuando está activo |
+| Progreso | Tiempo y barra de la canción |
+| Volumen de Spotify | Sube, baja o silencia **solo Spotify**, no el resto del PC |
+| Playlist / álbum | Pega un enlace de Spotify: la tecla muestra su portada y la reproduce |
+| Me gusta | Guarda la canción (requiere conectar una cuenta, ver abajo) |
+
+Las perillas vienen configuradas así: **1** = volumen de Spotify, **2** = cambiar de canción,
+**3** = volumen del PC.
+
+Spotify entrega a Windows la portada con una franja negra y su logo. La app la detecta y la recorta:
+
+<p align="center"><img src="docs/img/recorte_franja.png" alt="Recorte automático de la franja de Spotify" width="350"></p>
+
+**«Me gusta» y reproducir playlists al momento** usan la API web de Spotify: crea una app gratis en
+`developer.spotify.com/dashboard`, añade la Redirect URI `http://127.0.0.1:8754/callback`, y pega el
+*Client ID* en **Ajustes → Spotify → Conectar cuenta**. Según las reglas de Spotify de 2026, el dueño
+de esa app debe tener Premium.
+
+## Estilos de la tecla «Ahora suena»
+
+En el inspector, **✨ Ver estilos…** abre una galería animada. Siete estilos, más opciones para la pausa
+y el cambio de canción:
+
+<p align="center"><img src="docs/img/estilos.gif" alt="Estilos animados de la tecla Ahora suena" width="560"></p>
+
+- **Estilo:** solo portada · título deslizante · barra de progreso · ecualizador animado ·
+  disco de vinilo girando · portada que late · paneo lento.
+- **Al pausar:** no cambiar · atenuar · blanco y negro · icono de pausa · detener animación.
+- **Al cambiar de canción:** ninguna · fundido · deslizar · acercar.
+- **Recorte:** automático · manual (% de abajo) · no recortar.
+
+<p align="center"><img src="docs/img/transiciones.png" alt="Transiciones al cambiar de canción" width="620"></p>
+
+## Reacción de teclas y botones
+
+Sección **Reacción** del inspector, para todas las teclas menos «Ahora suena»:
+
+<p align="center"><img src="docs/img/reacciones.gif" alt="Efectos al pulsar: onda, chispas, destello, hundir, borde" width="360"></p>
+
+- **Al pulsar:** onda, destello, hundir, borde de color o chispas.
+- **Sonido:** clic, pop, tic, suave, teclado mecánico o burbuja, y tus propios `.wav`.
+  Los botones sin pantalla también pueden sonar.
+- **Con la música:** la tecla reacciona al **sonido real de Spotify** en cada momento.
+
+<p align="center"><img src="docs/img/reacciones_musica.png" alt="Reacciones a la música: latido, borde, barra de nivel y destello en cada golpe" width="620"></p>
+
+## Apariencia: temas y fondos
+
+Botón **🎨 Apariencia**:
+
+- **Tema:** oscuro, claro o como Windows, con barra de título a juego.
+- **Color de acento:** azul, verde Spotify, morado, rosa, naranja, rojo o cian.
+- **Fondo:** ninguno · portada de la canción (cambia sola con fundido) · imagen · video o GIF.
+- **Efectos:** desenfoque, velo, saturación, viñeta y movimiento lento, aplicados al momento.
+  El fondo se pausa cuando la ventana está oculta.
+
+<p align="center"><img src="docs/img/interfaz_clara.jpg" alt="Interfaz con tema claro" width="720"></p>
+<p align="center"><img src="docs/img/fondo_efectos.png" alt="Efectos del fondo" width="720"></p>
+
+## Protector de pantalla
+
+**Ajustes → Protector de pantalla:** tras unos minutos sin tocar el N3E muestra la **portada gigante
+repartida en las 6 teclas**, baja el brillo o apaga las pantallas. Cualquier toque lo despierta, sin
+ejecutar ninguna acción.
+
+<p align="center"><img src="docs/img/protector.png" alt="Protector de pantalla con la portada repartida en las 6 teclas" width="420"></p>
+
+## Calibrar las pantallas
+
+Algunas unidades del N3E dibujan la imagen más pequeña o desplazada. En **Ajustes → Pantallas de las
+teclas**, pulsa **Ver patrón** y, mirando el dispositivo:
+
+- **− / +** ajusta el tamaño de 1 en 1 hasta que el marco blanco llegue a los bordes.
+- **◀ ▲ ▼ ▶** mueve la imagen hasta centrarla. **●** vuelve al centro.
+- **Giro** corrige la orientación si la flecha amarilla no apunta hacia arriba.
+- **Borrar el fondo que dejó el software oficial** viene activado de fábrica.
+
+<p align="center"><img src="docs/img/patron.png" alt="Patrón de calibración" width="420"></p>
+
+## Actualizaciones
+
+- **Ajustes → Actualizar desde archivo…** instala un `StreamDockLite-<versión>-actualizacion.zip`
+  de [Releases](../../releases). Siempre pide confirmación.
+- Antes de instalar se guarda una copia; **Ajustes → Volver a la versión anterior** la restaura.
+- Botón **🔗 Claude** (opcional, desactivado de fábrica): permite recibir actualizaciones en una carpeta
+  local que tú compartes; cada una se instala solo si pulsas «Sí».
+
+## Historial de versiones
+
+Resumen; el detalle de cada versión está en **[CHANGELOG.md](CHANGELOG.md)**.
+
+| Versión | Novedades |
+|---|---|
+| **2.7.0** | Más rápida sin cambiar el aspecto · efectos al pulsar · sonidos · teclas que reaccionan a la música |
+| ~~2.6.0~~ | Retirada (fondo con el video de Spotify: lenta y sin detección fiable) |
+| 2.5.0 | Temas oscuro/claro/Windows · color de acento · fondos con imagen, video/GIF o portada |
+| 2.4.3 | Centrado fino de las imágenes con flechas |
+| 2.4.2 | Las ventanas se abren una sola vez |
+| 2.4.1 | Borra el fondo del software oficial · tamaño y giro de imagen · patrón de prueba |
+| 2.4.0 | Icono junto al reloj · teclas de playlists · protector de pantalla · instalador `.exe` sin Python |
+| 2.3.0 | Estilos animados de «Ahora suena» · transiciones · recorte de la franja mejorado |
+| 2.2.x | Instalador · actualizaciones con vuelta atrás · portada a tecla completa |
+| 2.1.0 | Biblioteca de iconos con importación de `.zip`/`.rar` |
+| 2.0.0 | Solo N3E_1B05 · interfaz estilo Elgato · integración con Spotify |
+| 1.0.0 | Primera versión |
+
+## Para desarrolladores
+
+```
+StreamDockLite/      la app (Python 3.11+, tkinter, Pillow)
+  app.py             interfaz principal
+  dock.py            comunicación USB-HID con el N3E
+  render.py          dibujo de las teclas
+  spotify.py         Spotify (controles de Windows, volumen por app, API web opcional)
+  reactions.py       efectos al pulsar y con la música
+  sounds.py          sonidos generados al instalar
+  background.py      fondos de la ventana
+  theme.py           temas y colores
+  updater.py         actualizaciones y copias de seguridad
+installer/           instalador .exe en Go (incluye Python portátil con tkinter)
+docs/img/            imágenes de este README
+```
+
+Ejecutar desde el código (Windows):
+
+```
+py -3.12 -m pip install -r StreamDockLite/requirements.txt
+py -3.12 StreamDockLite/app.py
+```
+
+Compilar el instalador (Linux, macOS o WSL, con Go 1.22+):
+
+```
+./installer/build.sh      # → dist/StreamDockLite-Setup.exe y dist/StreamDockLite-<versión>-actualizacion.zip
+```
+
+## Créditos
+
+- El protocolo USB de los dispositivos Mirabox/Ajazz se documentó gracias al trabajo de ingeniería
+  inversa de los proyectos de código abierto [mirajazz](https://github.com/4ndv/mirajazz) y
+  [opendeck-akp03](https://github.com/4ndv/opendeck-akp03).
+- Python portátil del instalador: [python-build-standalone](https://github.com/astral-sh/python-build-standalone).
+- Spotify, Elgato y Stream Dock son marcas de sus respectivos dueños.
+
+Licencia [MIT](LICENSE).
